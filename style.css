@@ -1,0 +1,71 @@
+/* إعدادات عامة لإزالة الهوامش الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق الحاوية الأساسية */
+.container {
+  width: 120px; /* عرض الحاوية */
+  height: 100vh; /* ارتفاع الحاوية يغطي كامل الشاشة */
+  background: rgba(171, 68, 68, 0.39); /* لون الخلفية مع شفافية */
+  color: #FF0000; /* لون النص داخل الحاوية */
+  position: fixed; /* الحاوية ثابتة على الشاشة */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* لضمان أن الحاوية فوق العناصر الأخرى */
+}
+
+/* تنسيق الفقرة داخل الحاوية */
+.container p {
+  padding: 10px; /* مسافة داخلية بين النص وحدود الفقرة */
+  cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+}
+
+/* التأثير عند تمرير المؤشر فوق الفقرة */
+.container p:hover, button:hover {
+  background: rgba(255, 0, 0, 0.55); /* تغيير لون الخلفية */
+  color: #000000; /* تغيير لون النص */
+  border: none; /* إزالة الحدود الافتراضية */
+  border-radius: 5px; /* جعل الزوايا مستديرة */
+}
+
+/* تنسيق الزر لإغلاق القائمة */
+#close {
+  position: absolute; /* تحديد الموضع */
+  left: 125px; /* المسافة من الجهة اليسرى */
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* منطقة الفيديو */
+.video-container {
+  margin-left: 150px; /* إزاحة لترك مساحة للحاوية */
+  padding: 20px;
+}
+
+video {
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#show {
+  display: none; /* إخفاء زر "Show Menu" في البداية */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
